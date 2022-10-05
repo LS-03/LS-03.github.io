@@ -1,0 +1,55 @@
+* {
+   box-sizing: border-box;
+}
+
+.container {
+   margin: 0 auto;
+   width: 1440px;
+}
+
+.animated-logo {
+   position: relative;
+   
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+}
+
+.logo {
+   z-index: 10;
+   position:absolute;
+   left: 0;
+   top:0;
+   width: 100px;
+   height: 100px;
+   transition: all 0.5s ease-in-out; 
+}
+
+.animated-logo:hover {
+   cursor: pointer;
+}
+
+.animated-logo:hover .logo{
+   transform: rotate(180deg);
+}
+
+.animated-logo:hover .name .name-content{
+   transform: translateX(90%);
+}
+
+.name {
+   margin-top: 5px;
+   position: relative;
+   left: 70px;
+   overflow: hidden;
+   width: 200px;
+}
+
+.name-content {
+   z-index: 9;
+   position: relative;
+   left: -75%;
+   font-family: 'Rancho';
+   font-size: 78px;
+   transition: all .5s ease-in-out;
+}
